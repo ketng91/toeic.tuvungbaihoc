@@ -1416,16 +1416,35 @@ loadList();
 
 
 function loadLessonAudio() {
+
   const audio = document.getElementById("lessonAudio");
   const file = lessonAudios[currList];
 
-  if (file) {
-    audio.src = encodeURI(file);
-    audio.load();
-  } else {
+  // Không có file audio cho bài này
+  if (!file) {
+    audio.pause();
     audio.removeAttribute("src");
     audio.load();
+    return;
   }
+
+  // Tạo đường dẫn chính xác dựa trên vị trí file HTML
+  const audioURL = new URL(file, document.baseURI).href;
+
+  console.log("🎧 Audio đang tải:", audioURL);
+
+  audio.pause();
+  audio.src = audioURL;
+  audio.load();
+
+  // Kiểm tra lỗi
+  audio.onerror = function () {
+    console.error("❌ Không tải được audio:", audioURL);
+  };
+
+  audio.onloadedmetadata = function () {
+    console.log("✅ Audio đã tải thành công:", audioURL);
+  };
 }
 
 function speakWord(text){
