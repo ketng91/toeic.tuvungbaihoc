@@ -1075,9 +1075,9 @@ css
 
   </select>
 
-  <audio id="lessonAudio" controls>
-    <source src="" type="audio/mpeg">
-  </audio>
+<audio id="lessonAudio" controls>
+  Trình duyệt không hỗ trợ phát audio.
+</audio>
 
 </div>
 
@@ -1384,6 +1384,7 @@ function loadList(){
 
   setMode(reviewMode);
 
+  loadLessonAudio();
 }
 
 function updateCounter(){
@@ -1412,6 +1413,20 @@ function setMode(mode){
 
 document.getElementById("wordList").onchange = loadList;
 loadList();
+
+
+function loadLessonAudio() {
+  const audio = document.getElementById("lessonAudio");
+  const file = lessonAudios[currList];
+
+  if (file) {
+    audio.src = encodeURI(file);
+    audio.load();
+  } else {
+    audio.removeAttribute("src");
+    audio.load();
+  }
+}
 
 function speakWord(text){
 
