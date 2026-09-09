@@ -1417,35 +1417,44 @@ loadList();
 
 function loadLessonAudio() {
 
-  const audio = document.getElementById("lessonAudio");
-  const file = lessonAudios[currList];
+    const audio = document.getElementById("lessonAudio");
+    const file = lessonAudios[currList];
 
-  // Không có file audio cho bài này
-  if (!file) {
+    // Nếu bài không có audio
+    if (!file) {
+        audio.pause();
+        audio.removeAttribute("src");
+        audio.innerHTML = "";
+        audio.load();
+        return;
+    }
+
+    // Đường dẫn audio cùng thư mục với index.html
+    const audioURL = "./" + encodeURIComponent(file).replace(/%2F/g, "/");
+
+    console.log("🎧 Loading:", audioURL);
+
     audio.pause();
-    audio.removeAttribute("src");
+
+    audio.innerHTML = `
+        <source src="${audioURL}" type="audio/wav">
+        Trình duyệt không hỗ trợ phát audio.
+    `;
+
     audio.load();
-    return;
-  }
 
-  // Tạo đường dẫn chính xác dựa trên vị trí file HTML
-  const audioURL = new URL(file, document.baseURI).href;
+    audio.onloadedmetadata = function () {
+        console.log("✅ AUDIO OK");
+        console.log("Duration:", audio.duration);
+    };
 
-  console.log("🎧 Audio đang tải:", audioURL);
-
-  audio.pause();
-  audio.src = audioURL;
-  audio.load();
-
-  // Kiểm tra lỗi
-  audio.onerror = function () {
-    console.error("❌ Không tải được audio:", audioURL);
-  };
-
-  audio.onloadedmetadata = function () {
-    console.log("✅ Audio đã tải thành công:", audioURL);
-  };
+    audio.onerror = function () {
+        console.error("❌ AUDIO ERROR:", audio.error);
+        console.error("URL:", audioURL);
+    };
 }
+
+
 
 function speakWord(text){
 
