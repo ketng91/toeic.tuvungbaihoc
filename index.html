@@ -1074,10 +1074,10 @@ css
 
 
   </select>
-
-<audio id="lessonAudio" controls>
-  Trình duyệt không hỗ trợ phát audio.
-</audio>
+<!-- ĐOẠN NÀY CHÍNH LÀ THẺ AUDIO HIỆN TẠI CỦA BẠN -->
+  <audio id="lessonAudio" controls>
+    Trình duyệt không hỗ trợ phát audio.
+  </audio>
 
 </div>
 
@@ -1435,6 +1435,12 @@ function loadList(){
   loadExercises();
 
   setMode(reviewMode);
+
+// === THÊM ĐOẠN NÀY VÀO ĐÂY ===
+  const audioEl = document.getElementById("lessonAudio");
+  audioEl.src = `lesson${currList}.mp3`;
+  audioEl.load();
+  // ============================
 
 }
 
