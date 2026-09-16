@@ -1418,32 +1418,34 @@ let reviewMode = "vn-en";
 let meaningsVisible = true;
 
 /********** LOAD LIST **********/
+/********** LOAD LIST **********/
 function loadList(){
-
   currList = document.getElementById("wordList").value;
 
   listCopy = [...data[currList]];
-
   totalWords = listCopy.length;
-
   knownCount = 0;
 
   updateCounter();
-
   renderWords();
-
   loadExercises();
-
   setMode(reviewMode);
 
-// === THÊM ĐOẠN NÀY VÀO ĐÂY ===
+
+  // Cập nhật và nạp file audio tương ứng với bài đang chọn
   const audioEl = document.getElementById("lessonAudio");
   audioEl.src = `lesson${currList}.mp3`;
   audioEl.load();
-  // ============================
-
 }
 
+// Gán sự kiện và chạy lần đầu
+document.getElementById("wordList").onchange = loadList;
+
+// Gán nguồn audio ban đầu khi vừa vào trang
+const initialAudio = document.getElementById("lessonAudio");
+initialAudio.src = `lesson${document.getElementById("wordList").value}.mp3`;
+
+loadList();
 function updateCounter(){
   document.getElementById("progressCounter").innerText =
     `Đã biết ${knownCount} / ${totalWords}`;
