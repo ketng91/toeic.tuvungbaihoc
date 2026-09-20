@@ -399,7 +399,6 @@ select {
   }
 
 
-css
 /* =========================================================
    🐸 FROG VOCABULARY GAME
    ========================================================= */
@@ -1532,18 +1531,22 @@ function loadList(){
 
   updateCounter();
   renderWords();
-  loadExercises();
+  
+  if (typeof loadExercises === "function" && exercises[currList]) {
+    loadExercises();
+  }
+  
   setMode(reviewMode);
 
-  // Audio phải luôn lấy đúng theo bài đang chọn
+  // Xử lý nạp File Audio
   const audioEl = document.getElementById("lessonAudio");
   const audioFile = getLessonAudioFile(currList);
 
   audioEl.pause();
-  audioEl.currentTime = 0;
-  audioEl.src = new URL(audioFile, window.location.href).href;
-  audioEl.load();
+  audioEl.src = audioFile; // Gán đường dẫn tương đối
+  audioEl.load();          // Nạp lại dữ liệu audio
 }
+
 
 // Chỉ có MỘT sự kiện đổi bài
 document.getElementById("wordList").onchange = loadList;
