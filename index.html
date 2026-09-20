@@ -1529,18 +1529,25 @@ function loadList(){
   totalWords = listCopy.length;
   knownCount = 0;
 
-  updateCounter();
-  renderWords();
-  loadExercises();
-  setMode(reviewMode);
-
-  // Chỉ đổi đúng file audio tương ứng với bài đang chọn
+  // 🎧 ĐỔI AUDIO NGAY SAU KHI CHỌN BÀI
+  // Đặt đoạn này TRƯỚC loadExercises()
   const audio = document.getElementById("lessonAudio");
   audio.pause();
   audio.currentTime = 0;
-  audio.src = "lesson" + currList + ".mp3";
+  audio.src = getLessonAudioFile(currList);
   audio.load();
+
+  updateCounter();
+  renderWords();
+
+  loadExercises();
+
+  setMode(reviewMode);
 }
+
+document.getElementById("wordList").addEventListener("change", loadList);
+loadList();
+
 
 document.getElementById("wordList").addEventListener("change", loadList);
 
