@@ -1504,22 +1504,9 @@ File MP3 phải nằm cùng thư mục với file HTML.
 =========================================================
 */
 
-// =========================================================
- // 🎧 AUDIO THEO TỪNG BÀI
- // Chỉ cần đổi tên file ở đây nếu tên MP3 thực tế khác.
- // =========================================================
- const LESSON_AUDIO = {
-   "1": "lesson1.mp3",
-   "2": "lesson2.mp3",
-   "3": "lesson3.mp3",
-   "4": "lesson4.mp3",
-   "5": "lesson5.mp3",
-   "6": "lesson6.mp3"
- };
-
- function getLessonAudioFile(lessonNumber) {
-   return LESSON_AUDIO[String(lessonNumber)] || "";
- }
+function getLessonAudioFile(lessonNumber) {
+  return `lesson${String(lessonNumber)}.mp3`;
+}
 
 
 let currList = 1,
@@ -1536,38 +1523,10 @@ let meaningsVisible = true;
 
 /********** LOAD LIST **********/
 /********** LOAD LIST **********/
-function updateLessonAudio(lessonNumber) {
-  const audioEl = document.getElementById("lessonAudio");
-  if (!audioEl) return;
-
-  const audioFile = getLessonAudioFile(lessonNumber);
-
-  // Dừng file cũ hoàn toàn trước khi đổi sang bài mới
-  audioEl.pause();
-  audioEl.currentTime = 0;
-
-  if (!audioFile) {
-    audioEl.removeAttribute("src");
-    audioEl.load();
-    return;
-  }
-
-  // Luôn tạo URL đúng theo bài đang được chọn
-  const audioUrl = new URL(audioFile, document.baseURI).href;
-
-  // Chỉ đổi source khi source thực sự khác
-  if (audioEl.src !== audioUrl) {
-    audioEl.src = audioUrl;
-  }
-
-  audioEl.load();
-}
-
 function loadList(){
-  const select = document.getElementById("wordList");
-  currList = String(select.value);
+  currList = String(document.getElementById("wordList").value);
 
-  listCopy = [...(data[currList] || [])];
+  listCopy = [...data[currList]];
   totalWords = listCopy.length;
   knownCount = 0;
 
@@ -1576,14 +1535,19 @@ function loadList(){
   loadExercises();
   setMode(reviewMode);
 
-  // QUAN TRỌNG: audio luôn lấy theo đúng value của bài đang chọn
-  updateLessonAudio(currList);
+  // Audio phải luôn lấy đúng theo bài đang chọn
+  const audioEl = document.getElementById("lessonAudio");
+  const audioFile = getLessonAudioFile(currList);
+
+  audioEl.pause();
+  audioEl.currentTime = 0;
+  audioEl.src = new URL(audioFile, window.location.href).href;
+  audioEl.load();
 }
 
-// Chỉ gán onchange MỘT LẦN để tránh các lần load trùng nhau
-document.getElementById("wordList").addEventListener("change", loadList);
+// Chỉ có MỘT sự kiện đổi bài
+document.getElementById("wordList").onchange = loadList;
 
-// Nạp bài + audio đúng ngay khi mở trang
 loadList();
 function updateCounter(){
   document.getElementById("progressCounter").innerText =
