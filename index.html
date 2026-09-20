@@ -1078,9 +1078,9 @@ css
 
   </select>
 <!-- ĐOẠN NÀY CHÍNH LÀ THẺ AUDIO HIỆN TẠI CỦA BẠN -->
-  <audio id="lessonAudio" controls src="lesson1.mp3">
-    Trình duyệt không hỗ trợ phát audio.
-  </audio>
+  <audio id="lessonAudio" controls preload="metadata">
+  Trình duyệt không hỗ trợ phát audio.
+</audio>
 
 </div>
 
@@ -1533,12 +1533,19 @@ function loadList(){
   renderWords();
   loadExercises();
   setMode(reviewMode);
-
-  // Chỉ đổi đúng file audio tương ứng với bài đang chọn
+  // ==========================================
+  // 🎧 AUDIO ĐÚNG THEO BÀI ĐANG CHỌN
+  // ==========================================
   const audio = document.getElementById("lessonAudio");
+
+  const audioFile =
+    "lesson" + currList + ".mp3?v=" + Date.now();
+
   audio.pause();
-  audio.currentTime = 0;
-  audio.src = "lesson" + currList + ".mp3";
+  audio.removeAttribute("src");
+  audio.load();
+
+  audio.src = audioFile;
   audio.load();
 }
 
