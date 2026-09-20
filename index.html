@@ -399,6 +399,7 @@ select {
   }
 
 
+css
 /* =========================================================
    🐸 FROG VOCABULARY GAME
    ========================================================= */
@@ -1077,7 +1078,7 @@ select {
 
   </select>
 <!-- ĐOẠN NÀY CHÍNH LÀ THẺ AUDIO HIỆN TẠI CỦA BẠN -->
-  <audio id="lessonAudio" controls>
+  <audio id="lessonAudio" controls src="lesson1.mp3">
     Trình duyệt không hỗ trợ phát audio.
   </audio>
 
@@ -1504,9 +1505,8 @@ File MP3 phải nằm cùng thư mục với file HTML.
 */
 
 function getLessonAudioFile(lessonNumber) {
-  return `lesson${String(lessonNumber)}.mp3`;
+  return "lesson" + String(lessonNumber) + ".mp3";
 }
-
 
 let currList = 1,
     listCopy = [],
@@ -1521,9 +1521,9 @@ let reviewMode = "vn-en";
 let meaningsVisible = true;
 
 /********** LOAD LIST **********/
-/********** LOAD LIST **********/
 function loadList(){
-  currList = String(document.getElementById("wordList").value);
+  const select = document.getElementById("wordList");
+  currList = String(select.value);
 
   listCopy = [...data[currList]];
   totalWords = listCopy.length;
@@ -1531,27 +1531,22 @@ function loadList(){
 
   updateCounter();
   renderWords();
-  
-  if (typeof loadExercises === "function" && exercises[currList]) {
-    loadExercises();
-  }
-  
+  loadExercises();
   setMode(reviewMode);
 
-  // Xử lý nạp File Audio
-  const audioEl = document.getElementById("lessonAudio");
-  const audioFile = getLessonAudioFile(currList);
-
-  audioEl.pause();
-  audioEl.src = audioFile; // Gán đường dẫn tương đối
-  audioEl.load();          // Nạp lại dữ liệu audio
+  // Chỉ đổi đúng file audio tương ứng với bài đang chọn
+  const audio = document.getElementById("lessonAudio");
+  audio.pause();
+  audio.currentTime = 0;
+  audio.src = "lesson" + currList + ".mp3";
+  audio.load();
 }
 
+document.getElementById("wordList").addEventListener("change", loadList);
 
-// Chỉ có MỘT sự kiện đổi bài
-document.getElementById("wordList").onchange = loadList;
-
+// Bài mặc định
 loadList();
+
 function updateCounter(){
   document.getElementById("progressCounter").innerText =
     `Đã biết ${knownCount} / ${totalWords}`;
