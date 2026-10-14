@@ -1080,8 +1080,10 @@ css
     <option value="11">Từ vựng bài học - 11</option>
     <option value="12">Từ vựng bài học - 12</option>
     <option value="13">Từ vựng bài học - 13</option>
-    <option value="14">Từ vựng bài học - 14</option>
+    <option value="14A">Từ vựng bài học - 14A</option>
+    <option value="14B">Từ vựng bài học - 14B</option>
     <option value="15">Từ vựng bài học - 15</option>
+    <option value="WHEN">Từ vựng bài học - WHEN</option>
 
 
 
@@ -1860,7 +1862,7 @@ const data = {
   { en: "therefore (adv) /ˈðerfɔːr/", vn: "do đó, vì vậy", tick: false }
   ],
 
-  14: [
+  "14A": [
   { en: "auditorium (n) /ˌɔːdɪˈtɔːriəm/", vn: "thính phòng, hội trường", tick: false },
   { en: "revise (v) /rɪˈvaɪz/", vn: "sửa đổi, chỉnh sửa, ôn tập", tick: false },
   { en: "revision (n) /rɪˈvɪʒn/", vn: "sự sửa đổi, việc ôn tập", tick: false },
@@ -1897,7 +1899,7 @@ const data = {
   { en: "decision (n) /dɪˈsɪʒn/", vn: "sự quyết định", tick: false },
   ],
 
-  15: [
+  "14B": [
   { en: "order (v/n) /ˈɔːrdər/", vn: "đặt hàng, ra lệnh / đơn hàng, thứ tự", tick: false },
   { en: "voice (n/v) /vɔɪs/", vn: "giọng nói / bày tỏ, phát biểu", tick: false },
   { en: "umbrella (n) /ʌmˈbrelə/", vn: "cây ô, cái dù", tick: false },
@@ -1934,6 +1936,114 @@ const data = {
   { en: "necessary for (phr) /ˈnesəseri fɔːr/", vn: "cần thiết cho cái gì/ai", tick: false },
   { en: "necessity (n) /nəˈsesəti/", vn: "sự cần thiết, thứ thiết yếu", tick: false }
 
+  ],
+
+  15: [
+
+  ],
+
+  "WHEN": [
+  // 1. CÁC NGÀY TRONG TUẦN (Days of the Week)
+  { en: "Monday (n) /ˈmʌndeɪ/", vn: "Thứ Hai", tick: false },
+  { en: "Tuesday (n) /ˈtuːzdeɪ/", vn: "Thứ Ba", tick: false },
+  { en: "Wednesday (n) /ˈwenzdeɪ/", vn: "Thứ Tư", tick: false },
+  { en: "Thursday (n) /ˈθɜːrzdeɪ/", vn: "Thứ Năm", tick: false },
+  { en: "Friday (n) /ˈfraɪdeɪ/", vn: "Thứ Sáu", tick: false },
+  { en: "Saturday (n) /ˈsætərdeɪ/", vn: "Thứ Bảy", tick: false },
+  { en: "Sunday (n) /ˈsʌndeɪ/", vn: "Chủ Nhật", tick: false },
+  { en: "weekday (n) /ˈwiːkdeɪ/", vn: "ngày trong tuần (từ Thứ 2 đến Thứ 6)", tick: false },
+  { en: "weekend (n) /ˈwiːkend/", vn: "cuối tuần (Thứ 7 và Chủ Nhật)", tick: false },
+
+  // 2. THÁNG TRONG NĂM (Months of the Year)
+  { en: "January (n) /ˈdʒænjueri/", vn: "Tháng 1", tick: false },
+  { en: "February (n) /ˈfebrueri/", vn: "Tháng 2", tick: false },
+  { en: "March (n) /mɑːrtʃ/", vn: "Tháng 3", tick: false },
+  { en: "April (n) /ˈeɪprəl/", vn: "Tháng 4", tick: false },
+  { en: "May (n) /meɪ/", vn: "Tháng 5", tick: false },
+  { en: "June (n) /dʒuːn/", vn: "Tháng 6", tick: false },
+  { en: "July (n) /dʒuˈlaɪ/", vn: "Tháng 7", tick: false },
+  { en: "August (n) /ɔːˈɡʌst/", vn: "Tháng 8", tick: false },
+  { en: "September (n) /sepˈtembər/", vn: "Tháng 9", tick: false },
+  { en: "October (n) /ɑːkˈtoʊbər/", vn: "Tháng 10", tick: false },
+  { en: "November (n) /noʊˈvembər/", vn: "Tháng 11", tick: false },
+  { en: "December (n) /dɪˈsembər/", vn: "Tháng 12", tick: false },
+
+  // 3. MÙA TRONG NĂM (Seasons)
+  { en: "spring (n) /sprɪŋ/", vn: "Mùa xuân", tick: false },
+  { en: "summer (n) /ˈsʌmər/", vn: "Mùa hè", tick: false },
+  { en: "autumn (n) /ˈɔːtəm/", vn: "Mùa thu (Anh - Anh)", tick: false },
+  { en: "fall (n) /fɔːl/", vn: "Mùa thu (Anh - Mỹ)", tick: false },
+  { en: "winter (n) /ˈwɪntər/", vn: "Mùa đông", tick: false },
+  { en: "rainy season (np) /ˈreɪni ˈsiːzn/", vn: "Mùa mưa", tick: false },
+  { en: "dry season (np) /draɪ ˈsiːzn/", vn: "Mùa khô", tick: false },
+
+  // 4. ĐƠN VỊ THỜI GIAN (Units of Time)
+  { en: "second (n) /ˈsekənd/", vn: "Giây", tick: false },
+  { en: "minute (n) /ˈmɪnɪt/", vn: "Phút", tick: false },
+  { en: "hour (n) /ˈaʊər/", vn: "Giờ / Tiếng đồng hồ", tick: false },
+  { en: "day (n) /deɪ/", vn: "Ngày", tick: false },
+  { en: "week (n) /wiːk/", vn: "Tuần", tick: false },
+  { en: "fortnight (n) /ˈfɔːrtnaɪt/", vn: "Nửa tháng (2 tuần)", tick: false },
+  { en: "month (n) /mʌnθ/", vn: "Tháng", tick: false },
+  { en: "quarter (n) /ˈkwɔːrtər/", vn: "Quý (3 tháng)", tick: false },
+  { en: "year (n) /jɪr/", vn: "Năm", tick: false },
+  { en: "decade (n) /ˈdekeɪd/", vn: "Thập kỷ (10 năm)", tick: false },
+  { en: "century (n) /ˈsentʃəri/", vn: "Thế kỷ (100 năm)", tick: false },
+  { en: "millennium (n) /mɪˈleniəm/", vn: "Thiên niên kỷ (1000 năm)", tick: false },
+  { en: "leap year (np) /ˈliːp jɪr/", vn: "Năm nhuận", tick: false },
+
+  // 5. THỜI GIAN TRONG NGÀY (Times of Day)
+  { en: "morning (n) /ˈmɔːrnɪŋ/", vn: "Buổi sáng", tick: false },
+  { en: "noon (n) /nuːn/", vn: "Buổi trưa (chính xác 12h trưa)", tick: false },
+  { en: "midday (n) /ˌmɪdˈdeɪ/", vn: "Buổi trưa", tick: false },
+  { en: "afternoon (n) /ˌæftərˈnuːn/", vn: "Buổi chiều", tick: false },
+  { en: "evening (n) /ˈiːvnɪŋ/", vn: "Buổi tối", tick: false },
+  { en: "night (n) /naɪt/", vn: "Đêm, buổi đêm", tick: false },
+  { en: "midnight (n) /ˈmɪdnaɪt/", vn: "Nửa đêm (12h đêm)", tick: false },
+  { en: "dawn (n) /dɔːn/", vn: "Bình minh, rạng đông", tick: false },
+  { en: "dusk (n) /dʌsk/", vn: "Hoàng hôn, chạng vạng", tick: false },
+  { en: "sunrise (n) /ˈsʌnraɪz/", vn: "Lúc mặt trời mọc", tick: false },
+  { en: "sunset (n) /ˈsʌnset/", vn: "Lúc mặt trời lặn", tick: false },
+
+  // 6. CÁC MỐC THỜI GIAN TƯƠNG ĐỐI (Relative Time & Adverbs)
+  { en: "yesterday (n/adv) /ˈjestərdeɪ/", vn: "Hôm qua", tick: false },
+  { en: "today (n/adv) /təˈdeɪ/", vn: "Hôm nay", tick: false },
+  { en: "tomorrow (n/adv) /təˈmɑːroʊ/", vn: "Ngày mai", tick: false },
+  { en: "the day before yesterday (phr)", vn: "Ngày kia / Ngày hôm kia", tick: false },
+  { en: "the day after tomorrow (phr)", vn: "Ngày kia / Ngày mai nữa", tick: false },
+  { en: "now (adv) /naʊ/", vn: "Bây giờ, hiện tại", tick: false },
+  { en: "right now (adv)", vn: "Ngay bây giờ", tick: false },
+  { en: "recently (adv) /ˈriːsntli/", vn: "Gần đây", tick: false },
+  { en: "lately (adv) /ˈleɪtli/", vn: "Dạo gần đây", tick: false },
+  { en: "currently (adv) /ˈkɜːrəntli/", vn: "Hiện tại", tick: false },
+  { en: "formerly (adv) /ˈfɔːrmərli/", vn: "Trước đây, thủa xưa", tick: false },
+  { en: "previously (adv) /ˈpriːviəsli/", vn: "Trước đó", tick: false },
+  { en: "afterwards (adv) /ˈæftərwərdz/", vn: "Sau đó", tick: false },
+  { en: "soon (adv) /suːn/", vn: "Sớm, chẳng bao lâu nữa", tick: false },
+  { en: "eventually (adv) /ɪˈventʃuəli/", vn: "Cuối cùng thì", tick: false },
+  { en: "meanwhile (adv) /ˈmiːnwaɪl/", vn: "Trong lúc đó, trong khi chờ đợi", tick: false },
+  { en: "simultaneously (adv) /ˌsaɪmlˈteɪniəsli/", vn: "Cùng một lúc, đồng thời", tick: false },
+
+  // 7. CÁC CỤM TỪ CHỈ TẦN SUẤT & THỜI ĐIỂM DÙNG TRẢ LỜI "WHEN" (Time Phrases)
+  { en: "in the morning (phr)", vn: "Vào buổi sáng", tick: false },
+  { en: "in the afternoon (phr)", vn: "Vào buổi chiều", tick: false },
+  { en: "in the evening (phr)", vn: "Vào buổi tối", tick: false },
+  { en: "at night (phr)", vn: "Vào ban đêm", tick: false },
+  { en: "at noon (phr)", vn: "Vào giữa trưa", tick: false },
+  { en: "at midnight (phr)", vn: "Vào lúc nửa đêm", tick: false },
+  { en: "at dawn (phr)", vn: "Vào lúc bình minh", tick: false },
+  { en: "at dusk (phr)", vn: "Vào lúc chạng vạng", tick: false },
+  { en: "at weekends (phr)", vn: "Vào cuối tuần (Anh - Anh)", tick: false },
+  { en: "on weekends (phr)", vn: "Vào cuối tuần (Anh - Mỹ)", tick: false },
+  { en: "every day (adv)", vn: "Mỗi ngày, hàng ngày", tick: false },
+  { en: "every other day (phr)", vn: "Cách một ngày (2 ngày 1 lần)", tick: false },
+  { en: "once a week (phr)", vn: "Mỗi tuần một lần", tick: false },
+  { en: "twice a month (phr)", vn: "Mỗi tháng hai lần", tick: false },
+  { en: "on time (phr)", vn: "Đúng giờ (theo lịch trình)", tick: false },
+  { en: "in time (phr)", vn: "Kịp giờ (kịp thời điểm)", tick: false },
+  { en: "ahead of time (phr)", vn: "Trước thời hạn", tick: false },
+  { en: "behind schedule (phr)", vn: "Trễ so với lịch trình", tick: false },
+  { en: "ahead of schedule (phr)", vn: "Trước lịch trình", tick: false }
   ],
 
 
