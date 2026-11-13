@@ -1083,8 +1083,12 @@ css
     <option value="14A">Từ vựng bài học - 14A</option>
     <option value="14B">Từ vựng bài học - 14B</option>
     <option value="15">Từ vựng bài học - 15</option>
-    <option value="21">Từ vựng bài học - 21</option>
+    <option value="21A">Từ vựng bài học - 21</option>
+    <option value="21B">Từ vựng bài học - Liên từ</option>
     <option value="22">Từ vựng bài học - 22</option>
+    <option value="23A">Từ vựng bài học - Trạng từ liên kết & Giới từ liên kết</option>
+    <option value="23B">Từ vựng bài học - 23B</option>
+    <option value="24">Từ vựng bài học - 24</option>
 
 
 
@@ -2042,7 +2046,7 @@ const data = {
   { en: "ahead of schedule (phr)", vn: "Trước lịch trình", tick: false }
   ],
 
-  21: [
+  "21A": [
   // 1. CHỦ ĐỀ SỰ KIỆN & TỔ CHỨC (EVENTS & FUNDRAISING)
   { en: "library (n) /ˈlaɪbreri/", vn: "thư viện", tick: false },
   { en: "annual (adj) /ˈænjuəl/", vn: "hàng năm, thường niên", tick: false },
@@ -2119,6 +2123,58 @@ const data = {
   { en: "indicate (v) /ˈɪndɪkeɪt/", vn: "chỉ ra, ra hiệu", tick: false }
   ],
 
+  "21B": [
+
+  { en: "for (conj) /fɔːr/", vn: "vì, bởi vì (liên từ đẳng lập chỉ lý do, đứng sau dấu phẩy) (, ~ + S + V)", tick: false },
+  { en: "and (conj) /ænd/", vn: "và, cùng với (liên từ đẳng lập bổ sung ý) (A ~ B)", tick: false },
+  { en: "nor (conj) /nɔːr/", vn: "cũng không (liên từ đẳng lập phủ định, dùng đảo ngữ) (, ~ + trợ V + S + V)", tick: false },
+  { en: "but (conj) /bʌt/", vn: "nhưng, tuy nhiên (liên từ đẳng lập chỉ sự tương phản) (, ~ + S + V)", tick: false },
+  { en: "or (conj) /ɔːr/", vn: "hoặc, hay là (liên từ đẳng lập chỉ sự lựa chọn) (A ~ B)", tick: false },
+  { en: "yet (conj) /jet/", vn: "tuy nhiên, vậy mà (liên từ đẳng lập chỉ sự đối lập mạnh) (, ~ + S + V)", tick: false },
+  { en: "so (conj) /soʊ/", vn: "vì vậy, cho nên (liên từ đẳng lập chỉ kết quả) (, ~ + S + V)", tick: false },
+  { en: "both ... and (correlative conj)", vn: "cả ... lẫn ... (~ A ~ B + V số nhiều)", tick: false },
+  { en: "not only ... but also (correlative conj)", vn: "không những ... mà còn ... (~ A ~ B / chia V theo B)", tick: false },
+  { en: "either ... or (correlative conj)", vn: "hoặc ... hoặc ... (~ A ~ B / chia V theo B)", tick: false },
+  { en: "neither ... nor (correlative conj)", vn: "không ... cũng không ... (~ A ~ B / chia V theo B)", tick: false },
+  { en: "whether ... or (correlative conj)", vn: "liệu ... hay là ... (~ S + V ~ not)", tick: false },
+  { en: "rather ... than (correlative conj)", vn: "thà ... còn hơn là ... (would ~ V1 ~ V2)", tick: false },
+  { en: "when (conj) /wen/", vn: "khi, vào lúc (~ S + V)", tick: false },
+  { en: "as (conj) /æz/", vn: "khi, trong lúc, bởi vì, như (~ S + V / ~ if)", tick: false },
+  { en: "once (conj) /wʌns/", vn: "ngay khi, một khi (~ S + V)", tick: false },
+  { en: "while (conj) /waɪl/", vn: "trong khi, trong khi mà (~ S + V / diễn tả 2 hành động song song hoặc đối lập)", tick: false },
+  { en: "before (conj/prep) /bɪˈfɔːr/", vn: "trước khi (~ S + V / ~ V-ing/N)", tick: false },
+  { en: "after (conj/prep) /ˈæftər/", vn: "sau khi (~ S + V / ~ V-ing/N)", tick: false },
+  { en: "since (conj/prep) /sɪns/", vn: "từ khi, bởi vì (~ S + V quá khứ đơn / ~ mốc thời gian)", tick: false },
+  { en: "until / till (conj/prep) /ənˈtɪl/", vn: "cho đến khi (~ S + V / ~ mốc thời gian)", tick: false },
+  { en: "whenever (conj) /wenˈevər/", vn: "bất kỳ khi nào (~ S + V)", tick: false },
+  { en: "so ... that (conj)", vn: "quá ... đến mức mà (~ adj/adv ~ S + V)", tick: false },
+  { en: "such ... that (conj)", vn: "quá ... đến mức mà (~ (a/an) + adj + N ~ S + V)", tick: false },
+  { en: "so that (conj)", vn: "để mà (chỉ mục đích) (~ S + can/could/will/would + V)", tick: false },
+  { en: "in order that (conj)", vn: "để mà (chỉ mục đích, trang trọng) (~ S + can/could/will/would + V)", tick: false },
+  { en: "in order to / so as to / to (phr)", vn: "để làm gì (chỉ mục đích) (~ V nguyên mẫu / in order not to V)", tick: false },
+  { en: "if (conj) /ɪf/", vn: "nếu, liệu rằng (~ S + V)", tick: false },
+  { en: "unless (conj) /ənˈles/", vn: "trừ khi, nếu ... không (~ S + V khẳng định)", tick: false },
+  { en: "provided (that) / providing (that) (conj) /prəˈvaɪdɪd/", vn: "với điều kiện là, miễn là (~ S + V)", tick: false },
+  { en: "as long as / so long as (conj)", vn: "miễn là, với điều kiện là (~ S + V)", tick: false },
+  { en: "than (conj/prep) /ðæn/", vn: "hơn (dùng trong so sánh hơn) (adj-er / more + adj ~)", tick: false },
+  { en: "as ... as (conj)", vn: "bằng, như (dùng trong so sánh bằng) (~ adj/adv ~)", tick: false },
+  { en: "whereas (conj) /ˌwerˈæz/", vn: "trong khi mà (chỉ sự đối lập, thường có dấu phẩy phía trước) (, ~ S + V)", tick: false },
+  { en: "as if / as though (conj)", vn: "như thể là (thường lùi thì nếu trái thực tế) (~ S + V)", tick: false },
+  { en: "where (conj) /wer/", vn: "nơi mà (~ S + V)", tick: false },
+  { en: "wherever (conj) /werˈevər/", vn: "bất cứ nơi nào (~ S + V)", tick: false },
+  { en: "because (conj) /bɪˈkɔːz/", vn: "bởi vì (~ S + V)", tick: false },
+  { en: "now that (conj)", vn: "bởi vì giờ đây, xét thấy rằng (~ S + V)", tick: false },
+  { en: "in that (conj)", vn: "ở chỗ là, vì lý do là (~ S + V)", tick: false },
+  { en: "because of (prep)", vn: "bởi vì, do (~ N/NP/V-ing)", tick: false },
+  { en: "due to (prep)", vn: "do, bởi vì (~ N/NP/V-ing / be ~)", tick: false },
+  { en: "owing to (prep)", vn: "do, vì (~ N/NP/V-ing)", tick: false },
+  { en: "thanks to (prep)", vn: "nhờ vào, nhờ có (~ N/NP/V-ing)", tick: false },
+  { en: "although / though / even though (conj) /ɔːlˈðoʊ/", vn: "mặc dù (~ S + V)", tick: false },
+  { en: "despite / in spite of (prep) /dɪˈspaɪt/", vn: "mặc dù, bất chấp (~ N/NP/V-ing)", tick: false },
+
+  ],
+
+
   22: [
 
   { en: "handbook (n) /ˈhændbʊk/", vn: "sổ tay hướng dẫn", tick: false },
@@ -2187,6 +2243,113 @@ const data = {
   ],
 
 
+
+  "23A": [
+
+  { en: "however (adv) /haʊˈevər/", vn: "tuy nhiên (trạng từ liên kết chỉ sự tương phản) (; ~, S + V / ~, S + V)", tick: false },
+  { en: "nevertheless / nonetheless (adv) /ˌnevərðəˈles/", vn: "tuy nhiên, dẫu vậy (trạng từ liên kết chỉ sự nhượng bộ) (~, S + V)", tick: false },
+  { en: "on the other hand (phr)", vn: "mặt khác (so sánh hai khía cạnh đối lập) (On the one hand ..., ~ ...)", tick: false },
+  { en: "in contrast / by contrast (phr)", vn: "trái lại, ngược lại (~ to/with sth / ~, S + V)", tick: false },
+  { en: "on the contrary (phr)", vn: "ngược lại, trái lại (bác bỏ ý trước đó) (~, S + V)", tick: false },
+  { en: "instead (adv) /ɪnˈsted/", vn: "thay vào đó (~, S + V / đứng cuối câu)", tick: false },
+  { en: "even so (phr)", vn: "dù vậy đi nữa, tuy thế (~, S + V)", tick: false },
+  { en: "that said / having said that (phr)", vn: "tuy nhiên, nói vậy nhưng (~, S + V)", tick: false },
+  { en: "therefore (adv) /ˈðerfɔːr/", vn: "vì thế, do đó (; ~, S + V)", tick: false },
+  { en: "thus (adv) /ðʌs/", vn: "do đó, như vậy (~, S + V / ~ V-ing)", tick: false },
+  { en: "consequently (adv) /ˈkɑːnsɪkwentli/", vn: "do đó, kết quả là (~, S + V)", tick: false },
+  { en: "as a result (phr)", vn: "kết quả là, do đó (~, S + V / ~ of N/V-ing)", tick: false },
+  { en: "accordingly (adv) /əˈkɔːrdɪŋli/", vn: "vì vậy, theo đó (~, S + V / act ~)", tick: false },
+  { en: "hence (adv) /hens/", vn: "do đó, kể từ đây (trang trọng) (~, S + V / ~ + NP)", tick: false },
+  { en: "moreover (adv) /mɔːrˈoʊvər/", vn: "hơn nữa, vả lại (~, S + V)", tick: false },
+  { en: "furthermore (adv) /ˌfɜːrðərˈmɔːr/", vn: "hơn nữa (trang trọng) (~, S + V)", tick: false },
+  { en: "in addition (phr)", vn: "ngoài ra, thêm vào đó (~, S + V / ~ to N/V-ing)", tick: false },
+  { en: "additionally (adv) /əˈdɪʃənəli/", vn: "thêm vào đó, ngoài ra (~, S + V)", tick: false },
+  { en: "besides (adv/prep) /bɪˈsaɪdz/", vn: "bên cạnh đó / ngoài ra (~, S + V / ~ N/V-ing)", tick: false },
+  { en: "also (adv) /ˈɔːlsoʊ/", vn: "cũng, hơn nữa (~, S + V / S + ~ + V)", tick: false },
+  { en: "what is more (phr)", vn: "hơn thế nữa (~, S + V)", tick: false },
+  { en: "on top of that (phr)", vn: "hơn thế nữa, trên hết (~, S + V)", tick: false },
+  { en: "for example (phr)", vn: "ví dụ (~, S + V)", tick: false },
+  { en: "for instance (phr)", vn: "chẳng hạn, ví dụ (~, S + V)", tick: false },
+  { en: "in particular (phr)", vn: "đặc biệt là, cụ thể là (~, S + V / N + ~)", tick: false },
+  { en: "namely (adv) /ˈneɪmli/", vn: "cụ thể là, tức là (liệt kê chính xác đối tượng) (~ A and B)", tick: false },
+  { en: "in fact / as a matter of fact (phr)", vn: "trên thực tế, thực tế là (nhấn mạnh hoặc đính chính) (~, S + V)", tick: false },
+  { en: "indeed (adv) /ɪnˈdiːd/", vn: "thực vậy, quả thực (~, S + V / very + adj + ~)", tick: false },
+  { en: "actually (adv) /ˈæktʃuəli/", vn: "thực ra, trên thực tế (~, S + V)", tick: false },
+  { en: "notably (adv) /ˈnoʊtəbli/", vn: "đáng chú ý là, đặc biệt là (~, S + V / most ~)", tick: false },
+  { en: "specifically / to be specific (adv/phr) /spəˈsɪfɪkli/", vn: "cụ thể là, nói một cách cụ thể (~, S + V)", tick: false },
+  { en: "otherwise (adv) /ˈʌðərwaɪz/", vn: "mặt khác, nếu không thì (~, S + V / or ~)", tick: false },
+  { en: "failing that (phr)", vn: "nếu không đạt được điều đó, nếu không được (~, S + V)", tick: false },
+  { en: "even then (phr)", vn: "ngay cả khi đó (~, S + V)", tick: false },
+  { en: "in the first place (phr)", vn: "ngay từ đầu (~, S + V / đứng cuối câu)", tick: false },
+  { en: "in the long run (phr)", vn: "về lâu dài (~, S + V)", tick: false },
+  { en: "in the meantime / meanwhile (phr/adv) /ˈmiːnwaɪl/", vn: "trong khi đó, trong lúc chờ đợi (~, S + V)", tick: false },
+  { en: "by and large (phr)", vn: "nhìn chung, đại thể là (~, S + V)", tick: false },
+  { en: "to put it another way (phr)", vn: "nói cách khác (~, S + V)", tick: false },
+  { en: "at any rate (phr)", vn: "dù sao thì, dù thế nào đi nữa (~, S + V)", tick: false },
+  { en: "all the same / just the same (phr)", vn: "dù thế nào đi nữa, tuy vậy (~, S + V)", tick: false },
+  { en: "under these circumstances (phr)", vn: "trong hoàn cảnh/trường hợp này (~, S + V)", tick: false },
+  { en: "not to mention (phr)", vn: "chưa kể đến (~ N/NP/V-ing)", tick: false },
+  { en: "on account of (prep)", vn: "vì, do (~ N/NP/V-ing)", tick: false },
+  { en: "prior to (prep) /ˈpraɪər tuː/", vn: "trước (về thời gian) (~ N/NP/V-ing)", tick: false },
+  { en: "on the grounds of (prep)", vn: "vì lý do, trên cơ sở (~ N/NP/V-ing)", tick: false },
+  { en: "by virtue of (prep)", vn: "nhờ vào, bởi vì (~ N/NP/V-ing)", tick: false },
+  { en: "with a view to (prep)", vn: "nhằm mục đích (~ V-ing/N)", tick: false },
+  { en: "for the purpose of (prep)", vn: "nhằm mục đích (~ V-ing/N)", tick: false },
+  { en: "regardless of (prep) /rɪˈɡɑːrdləs əv/", vn: "bất chấp, không kể đến (~ N/NP/V-ing/MĐ danh từ)", tick: false },
+  { en: "irrespective of (prep) /ˌɪrɪˈspektɪv əv/", vn: "bất chấp, bất kể (~ N/NP/V-ing)", tick: false },
+  { en: "apart from (prep)", vn: "ngoài ra / ngoại trừ (~ N/NP/V-ing)", tick: false },
+  { en: "in lieu of (prep) /ɪn ˈluː əv/", vn: "thay vì, thay thế cho (~ N/NP/V-ing)", tick: false },
+  { en: "instead of (prep)", vn: "thay vì (~ N/NP/V-ing)", tick: false },
+  { en: "rather than (prep/conj)", vn: "hơn là, thay vì (~ N/V-ing/V nguyên mẫu)", tick: false },
+  { en: "as an alternative to (prep)", vn: "như một sự thay thế cho (~ N/NP/V-ing)", tick: false },
+  { en: "in place of (prep)", vn: "thay cho, thay thế vị trí của (~ N/NP/V-ing)", tick: false },
+  { en: "as a consequence of (prep)", vn: "do hậu quả của (~ N/NP/V-ing)", tick: false },
+  { en: "in order to (phr)", vn: "để làm gì (~ V nguyên mẫu)", tick: false },
+  { en: "so as to (phr)", vn: "để làm gì (~ V nguyên mẫu)", tick: false },
+  { en: "like / as (prep) /laɪk/", vn: "như là (giống như / với tư cách là) (~ + N/NP)", tick: false },
+  { en: "such as (prep)", vn: "chẳng hạn như (đưa ra ví dụ) (~ + N/NP/V-ing)", tick: false }
+
+  ],
+
+  "23B": [
+
+  { en: "dispose of (phr v)", vn: "vứt bỏ, xử lý, tống khứ (~ waste / ~ old equipment)", tick: false },
+  { en: "facility (n) /fəˈsɪləti/", vn: "cơ sở vật chất, trang thiết bị, nơi tiện nghi (sports ~ies / healthcare ~)", tick: false },
+  { en: "recycle (v) /ˌriːˈsaɪkl/", vn: "tái chế (~ plastic/paper / ~ materials)", tick: false },
+  { en: "real estate (np) /ˈriːəl ɪsteɪt/", vn: "bất động sản, nhà đất (~ market / ~ broker)", tick: false },
+  { en: "agent (n) /ˈeɪdʒənt/", vn: "người đại diện, đại lý, môi giới (real estate ~ / travel ~)", tick: false },
+  { en: "agency (n) /ˈeɪdʒənsi/", vn: "cơ quan, công ty dịch vụ, đại lý (advertising ~ / government ~)", tick: false },
+  { en: "electronics (n) /ɪˌlekˈtrɑːnɪks/", vn: "đồ điện tử, ngành điện tử (consumer ~ / recycle ~)", tick: false },
+  { en: "deliver (v) /dɪˈlɪvər/", vn: "giao hàng, phân phát, truyền đạt (~ a package / ~ a speech)", tick: false },
+  { en: "delivery (n) /dɪˈlɪvəri/", vn: "sự giao hàng, sự phân phát (free ~ / ~ service)", tick: false },
+  { en: "yard (n) /jɑːrd/", vn: "sân, bãi, thước Anh (front ~ / back~)", tick: false },
+  { en: "waste (n/v) /weɪst/", vn: "rác thải, sự lãng phí / lãng phí (toxic ~ / ~ time/money)", tick: false },
+  { en: "wasteful (adj) /ˈweɪstfl/", vn: "lãng phí, hoang phí (~ of resources / ~ habit)", tick: false },
+  { en: "operation (n) /ˌɑːpəˈreɪʃn/", vn: "sự vận hành, hoạt động, ca phẫu thuật (in ~ / business ~s)", tick: false },
+  { en: "permit (n/v) /ˈpɜːrmɪt/ (n), /pərˈmɪt/ (v)", vn: "giấy phép / cho phép (building ~ / ~ sb to do sth)", tick: false },
+  { en: "application (n) /ˌæplɪˈkeɪʃn/", vn: "đơn xin việc/học, sự ứng dụng, phần mềm ứng dụng (~ form / submit an ~)", tick: false },
+  { en: "surprise (n/v) /sərˈpraɪz/", vn: "sự ngạc nhiên / làm ngạc nhiên (to one's ~ / by ~)", tick: false },
+  { en: "own (v/adj) /oʊn/", vn: "sở hữu, làm chủ / của riêng mình (~ a business / on one's ~)", tick: false },
+  { en: "owner (n) /ˈoʊnər/", vn: "người chủ, chủ sở hữu (property ~ / business ~)", tick: false },
+  { en: "delicious (adj) /dɪˈlɪʃəs/", vn: "thơm ngon, ngon miệng (~ meal / ~ smell)", tick: false },
+  { en: "consider (v) /kənˈsɪdər/", vn: "cân nhắc, xem xét, coi như (~ V-ing / ~ sb/sth as)", tick: false },
+  { en: "notice (v/n) /ˈnoʊtɪs/", vn: "để ý, nhận thấy / thông báo (take ~ of / at short ~)", tick: false },
+  { en: "university (n) /ˌjuːnɪˈvɜːrsəti/", vn: "trường đại học (attend ~ / ~ degree)", tick: false },
+  { en: "probably (adv) /ˈprɑːbəbli/", vn: "có lẽ, có khả năng cao (~ will / most ~)", tick: false },
+  { en: "neighbor / neighbour (n) /ˈneɪbər/", vn: "hàng xóm, láng giềng (next-door ~ / friendly ~)", tick: false },
+  { en: "neighborhood / neighbourhood (n) /ˈneɪbərhʊd/", vn: "khu phố, vùng lân cận (quiet ~ / in the ~)", tick: false },
+  { en: "fitness center (np) /ˈfɪtnəs sentər/", vn: "trung tâm thể hình (join a ~)", tick: false },
+  { en: "culinary (adj) /ˈkʌlɪneri/", vn: "thuộc về bếp núc, ẩm thực (~ skills / ~ arts)", tick: false },
+  { en: "bakery (n) /ˈbeɪkəri/", vn: "tiệm bánh mì, lò bánh (local ~ / fresh from the ~)", tick: false },
+  { en: "price (n/v) /praɪs/", vn: "giá cả / định giá (reasonable ~ / at a high ~)", tick: false },
+  { en: "rent (v/n) /rent/", vn: "thuê, cho thuê / tiền thuê nhà (~ an apartment / pay the ~)", tick: false },
+  { en: "rental (n/adj) /ˈrentl/", vn: "sự thuê mướn, tiền thuê / thuộc cho thuê (~ property / car ~)", tick: false }
+
+  ],
+
+  24: [
+
+  ],
 
 };
 /*
