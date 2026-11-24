@@ -1089,7 +1089,8 @@ css
     <option value="23A">Từ vựng bài học - Trạng từ liên kết & Giới từ liên kết</option>
     <option value="23B">Từ vựng bài học - 23B</option>
     <option value="24">Từ vựng bài học - 24</option>
-
+    <option value="27">Từ vựng bài học - 27</option>
+    <option value="28">Từ vựng bài học - 28</option>
 
 
   </select>
@@ -2162,7 +2163,6 @@ const data = {
   { en: "as if / as though (conj)", vn: "như thể là (thường lùi thì nếu trái thực tế) (~ S + V)", tick: false },
   { en: "where (conj) /wer/", vn: "nơi mà (~ S + V)", tick: false },
   { en: "wherever (conj) /werˈevər/", vn: "bất cứ nơi nào (~ S + V)", tick: false },
-  { en: "because (conj) /bɪˈkɔːz/", vn: "bởi vì (~ S + V)", tick: false },
   { en: "now that (conj)", vn: "bởi vì giờ đây, xét thấy rằng (~ S + V)", tick: false },
   { en: "in that (conj)", vn: "ở chỗ là, vì lý do là (~ S + V)", tick: false },
   { en: "because of (prep)", vn: "bởi vì, do (~ N/NP/V-ing)", tick: false },
@@ -2372,11 +2372,77 @@ const data = {
   { en: "lifeguard (n) /ˈlaɪfɡɑːrd/", vn: "nhân viên cứu hộ (ở bãi biển/hồ bơi) (on-duty ~ / beach ~)", tick: false }
 
   ],
-  25: [
+  27: [
+  // === 1. GENERAL & TOEIC VOCABULARY ===
+  { en: "tour guide (np) /ˈtʊr ɡaɪd/", vn: "hướng dẫn viên du lịch (work as a ~)", tick: false },
+  { en: "landlord (n) /ˈlændlɔːrd/", vn: "chủ nhà, chủ đất (pay rent to the ~)", tick: false },
+  { en: "appliances (n pl) /əˈplaɪənsɪz/", vn: "thiết bị gia dụng (electrical/kitchen ~)", tick: false },
+  { en: "cold (adj/n) /koʊld/", vn: "lạnh lẽo, lạnh nhạt / cơn cảm lạnh (catch a ~ / freezing ~)", tick: false },
+  { en: "expire (v) /ɪkˈspaɪər/", vn: "hết hạn, hết hiệu lực (contract/passport ~s)", tick: false },
+  { en: "expired (adj) /ɪkˈspaɪərd/", vn: "đã hết hạn (~ milk / ~ membership)", tick: false },
+  { en: "broken (adj) /ˈbroʊkən/", vn: "bị hỏng, bị vỡ (~ promise / ~ window)", tick: false },
+  { en: "intercom (n) /ˈɪntərkɑːm/", vn: "hệ thống liên lạc nội bộ (speak over the ~)", tick: false },
+  { en: "cause (n/v) /kɔːz/", vn: "nguyên nhân, mục đích / gây ra (~ and effect / ~ damage)", tick: false },
+  { en: "kind (adj/n) /kaɪnd/", vn: "tốt bụng, tử tế / loại, kiểu (be ~ to sb / a ~ of)", tick: false },
+  { en: "mobile (adj/n) /ˈmoʊbl/", vn: "di động, lưu động / điện thoại di động (~ phone / ~ app)", tick: false },
+  { en: "photograph (n/v) /ˈfoʊtəɡræf/", vn: "bức ảnh / chụp ảnh (take a ~ of)", tick: false },
+  { en: "hours of operation (np) /ˈaʊərz əv ˌɑːpəˈreɪʃn/", vn: "giờ hoạt động, giờ mở cửa (regular ~)", tick: false },
+  { en: "industry (n) /ˈɪndəstri/", vn: "ngành công nghiệp, lĩnh vực (tourism/tech ~)", tick: false },
+  { en: "likely (adj/adv) /ˈlaɪkli/", vn: "có khả năng, có thể xảy ra (be ~ to do sth / most ~)", tick: false },
+  { en: "fitness (n) /ˈfɪtnəs/", vn: "sự cân đối, thể lực, thể hình (~ center / physical ~)", tick: false },
+  { en: "entertainment (n) /ˌentərˈteɪnmənt/", vn: "sự giải trí, tiêu khiển (~ industry / live ~)", tick: false },
+  { en: "landscape (n) /ˈlændskeɪp/", vn: "phong cảnh, cảnh quan (natural ~ / ~ architecture)", tick: false },
+  { en: "suggest (v) /səɡˈdʒest/", vn: "đề nghị, gợi ý (~ doing sth / ~ that + S + V)", tick: false },
+  { en: "volunteer (n/v) /ˌvɑːlənˈtɪr/", vn: "tình nguyện viên / tình nguyện (~ to help)", tick: false },
+  { en: "offer (v/n) /ˈɔːfər/", vn: "đề nghị, cung cấp / lời đề nghị (~ a discount / job ~)", tick: false },
+  { en: "transport (v/n) /trænˈspɔːrt/ (v), /ˈtrænspɔːrt/ (n)", vn: "vận chuyển / phương tiện giao thông (public ~ / ~ goods)", tick: false },
+  { en: "transportation (n) /ˌtrænspərˈteɪʃn/", vn: "sự vận tải, phương tiện đi lại (means of ~)", tick: false },
+  { en: "free (adj/v) /friː/", vn: "miễn phí; tự do; rảnh rỗi / giải phóng (~ of charge / ~ time)", tick: false },
+  { en: "add (v) /æd/", vn: "thêm vào, cộng vào (~ value / ~ A to B)", tick: false },
+  { en: "additional (adj) /əˈdɪʃənl/", vn: "bổ sung, thêm vào (~ charge / ~ information)", tick: false },
+  { en: "slot (n) /slɑːt/", vn: "khe, vị trí, khung giờ trống (time ~ / parking ~)", tick: false },
+  { en: "promotional (adj) /prəˈmoʊʃənl/", vn: "quảng bá, khuyến mãi (~ campaign / ~ offer)", tick: false },
+  { en: "item (n) /ˈaɪtəm/", vn: "món hàng, vật phẩm, mục (essential ~s / agenda ~)", tick: false },
+  { en: "order (n/v) /ˈɔːrdər/", vn: "đơn đặt hàng, thứ tự / đặt hàng, ra lệnh (place an ~ / in ~)", tick: false },
+  { en: "small (adj) /smɔːl/", vn: "nhỏ bé, ít (~ business / ~ amount)", tick: false },
+  { en: "approve (v) /əˈpruːv/", vn: "chấp thuận, phê duyệt (~ of sth / ~ a budget)", tick: false },
+  { en: "client (n) /ˈklaɪənt/", vn: "khách hàng (dùng dịch vụ) (potential ~ / meet with a ~)", tick: false },
+  { en: "shipment (n) /ˈʃɪpmənt/", vn: "lô hàng, sự gửi hàng (track a ~ / delay in ~)", tick: false },
+  { en: "shorten (v) /ˈʃɔːrtn/", vn: "rút ngắn, làm ngắn lại (~ the deadline / ~ a speech)", tick: false },
+  { en: "timeline (n) /ˈtaɪmlaɪn/", vn: "mốc thời gian, tiến độ dự án (project ~ / strict ~)", tick: false },
+  { en: "expensive (adj) /ɪkˈspensɪv/", vn: "đắt tiền, tốn kém (~ equipment)", tick: false },
+  { en: "cost (n/v) /kɔːst/", vn: "chi phí, giá cả / trị giá, tốn kém (at all ~s / living ~s)", tick: false },
+  { en: "party (n) /ˈpɑːrti/", vn: "bữa tiệc; bên tham gia (hợp đồng); đảng phái (third ~ / throw a ~)", tick: false },
+
+  // === 2. LINKING VERBS (ĐỘNG TỪ NỐI + ADJ) ===
+  { en: "stay (linking v) /steɪ/", vn: "vẫn, giữ nguyên trạng thái (~ calm / ~ healthy / ~ open)", tick: false },
+  { en: "feel (linking v) /fiːl/", vn: "cảm thấy (~ tired / ~ comfortable / ~ confident)", tick: false },
+  { en: "become (linking v) /bɪˈkʌm/", vn: "trở nên, trở thành (~ popular / ~ aware of)", tick: false },
+  { en: "seem (linking v) /siːm/", vn: "dường như, có vẻ (~ reasonable / ~ to be)", tick: false },
+  { en: "appear (linking v) /əˈpɪr/", vn: "có vẻ như, tỏ ra (~ exhausted / ~ calm)", tick: false },
+  { en: "look (linking v) /lʊk/", vn: "trông có vẻ (~ promising / ~ pale / ~ happy)", tick: false },
+  { en: "sound (linking v) /saʊnd/", vn: "nghe có vẻ (~ interesting / ~ familiar / ~ great)", tick: false },
+  { en: "taste (linking v) /teɪst/", vn: "có vị (~ delicious / ~ bitter / ~ sour)", tick: false },
+  { en: "smell (linking v) /smel/", vn: "có mùi (~ fresh / ~ awful / ~ sweet)", tick: false },
+  { en: "grow (linking v) /ɡroʊ/", vn: "trở nên, dần trở nên (~ dark / ~ impatient / ~ old)", tick: false },
+  { en: "turn (linking v) /tɜːrn/", vn: "trở nên, chuyển thành (~ pale / ~ sour / ~ red)", tick: false },
+  { en: "get (linking v) /ɡet/", vn: "trở nên, bị (~ dark / ~ tired / ~ ready)", tick: false },
+  { en: "keep (linking v) /kiːp/", vn: "giữ cho, vẫn ở trạng thái (~ quiet / ~ warm / ~ busy)", tick: false },
+  { en: "leave (v) /liːv/", vn: "để cho, khiến cho (~ + O + adj: ~ the door open / ~ sb speechless)", tick: false },
+  { en: "prove (linking v) /pruːv/", vn: "chứng tỏ là, hóa ra là (~ difficult / ~ effective / ~ useful)", tick: false },
+  { en: "remain (linking v) /rɪˈmeɪn/", vn: "vẫn, vẫn còn (~ silent / ~ competitive / ~ unchanged)", tick: false },
+
+  // === 3. CONFUSING ADVERBS (CẶP TRẠNG TỪ DỄ NHẦM LẪN) ===
+  { en: "hard (adj/adv) /hɑːrd/", vn: "chăm chỉ, vất vả; cứng, khó (work ~ / study ~ / rain ~)", tick: false },
+  { en: "hardly (adv) /ˈhɑːrdli/", vn: "hầu như không (~ ever / ~ anyone / could ~ believe)", tick: false },
+  { en: "late (adj/adv) /leɪt/", vn: "muộn, trễ (arrive ~ / stay up ~ / be ~ for work)", tick: false },
+  { en: "lately (adv) /ˈleɪtli/", vn: "gần đây, mới đây (= recently) (have been busy ~)", tick: false },
+  { en: "high (adj/adv) /haɪ/", vn: "cao, ở vị trí cao (aim ~ / fly ~ / ~ quality)", tick: false },
+  { en: "highly (adv) /ˈhaɪli/", vn: "rất, hết sức, ở mức độ cao (~ recommended / ~ skilled / think ~ of)", tick: false }
 
 
   ],
-  26: [
+  28: [
 
 
   ],
